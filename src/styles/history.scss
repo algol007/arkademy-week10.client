@@ -1,0 +1,83 @@
+.show{
+  transition: 1s;
+  display: block !important;
+}
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: 0;
+}
+.display-menu{
+  padding: 76px 16px 16px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.modal-item-button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+.button-item{
+  width: 85px;
+}
+.field-label label{
+  text-align: left;
+}
+.modal-item-header{
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+.card-info{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.card-history{
+  margin: 0 10px;
+  border-radius: 6px;
+  width: 33%;
+  height: 180px;
+}
+.card-info .card-content{
+  color: #363636;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.card-info .card-content .today-income{
+  font-size: 1.5em;
+}
+.card-chart, .card-recent-order{
+  width: 100%;
+  padding: 10px;
+  margin-top: 2em;
+}
+.charts, .recent-order{
+  border-radius: 6px;
+}
+.card-title{
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.recent-order{
+  margin-bottom: 2em;
+}
+.bg-blue{
+  background-image: linear-gradient(285.38deg, #29DFFF 30.05%, rgba(241, 201, 236, 0) 133.19%);
+}
+.bg-purple{
+  background-image: linear-gradient(285.38deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+}
+.bg-pink{
+  background-image: linear-gradient(285.38deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+}
+@media screen and (max-width: 768px){
+  .card-info{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .card-history{
+    margin-top: 10px;
+    width: 95%;
+  }
+}

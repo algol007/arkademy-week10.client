@@ -1,0 +1,44 @@
+.modal-card{
+  background-color: #ffffff;
+}
+.modal-card-body{
+  padding-bottom: 0;
+}
+.receipt-detail{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  margin: 20px;
+}
+.button-receipt{
+  padding: 20px;
+}
+.button-receipt p{
+  text-align: center;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+.receipt-head{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0 20px;
+}
+.checkout-title{
+  font-size: 1.5em;
+}
+.receipt-number{
+  font-size: 1.2em;
+}
+.receipt-total{
+  justify-content: flex-end;
+}
+.receipt-total li:nth-child(1){
+  margin-right: 20px;
+}
+.receipt-payment{
+  justify-content: flex-start;
+}
+.receipt-payment li:nth-child(1), .button-item:nth-child(1){
+  margin-right: 20px;
+}

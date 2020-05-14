@@ -1,0 +1,28 @@
+.register{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 100px;
+  background: rgba(190, 195, 202, 0.3);
+  min-height: 100vh;
+}
+.title{
+  text-align: center;
+}
+.card-auth{
+  padding: 2em;
+  border-radius: 6px;
+}
+.is-login{
+  margin: 0 auto;
+}
+.control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error-message{
+  color: rgb(250, 0, 0);
+  font-size: 14px;
+  padding-left: 10px;
+}
