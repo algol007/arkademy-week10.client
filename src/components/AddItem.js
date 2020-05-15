@@ -1,6 +1,7 @@
 import React from "react"
 import '../styles/addItem.scss'
- 
+import axios from 'axios' 
+
 class AddItem extends React.Component {
   constructor() {
     super();
@@ -8,7 +9,7 @@ class AddItem extends React.Component {
       name: '',
       image: '',
       price: '',
-      categoryId: ''
+      categoryId: 1
     }
 
     this.uploadImage = this.uploadImage.bind(this)
@@ -34,7 +35,19 @@ class AddItem extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state)
+    const formData = new FormData()
+    formData.append('name', this.state.name)
+    formData.append('image', this.state.image)
+    formData.append('price', this.state.price)
+    formData.append('categoryId', this.state.categoryId)
+    axios
+      .post('http://localhost:5000/api/pos/admin/product', formData, {
+        headers: { 'baca-bismillah': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTg5NDk4NDAwfQ.w311Fh0T-O95O48BkRPJbu1QVtkstoo6tERLD3C3WGs'}
+      })
+      .then(res => {
+        console.log(res)
+        this.addProduct()
+      })
   }
 
   render() {
@@ -90,7 +103,7 @@ class AddItem extends React.Component {
                 <div className="field is-narrow">
                   <div className="control">
                     <div className="select is-fullwidth">
-                      <select name="categoryId" value={this.state.categoryId} onChange={(e) => this.handleChange(e)} required>
+                      <select name="categoryId" value={this.state.categoryId} onChange={(e) => this.handleChange(e)}>
                         <option value="1">Food</option>
                         <option value="2">Drink</option>
                         <option value="3">Desert</option>
